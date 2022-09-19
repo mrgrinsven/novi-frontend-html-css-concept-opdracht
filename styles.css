@@ -41,7 +41,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--basic-text-color);
-    min-width: 400px;
+    font-size: 1.2em;
 }
 
 h1,
@@ -53,19 +53,9 @@ h3 {
 ::placeholder {
     font-weight: normal;
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
-h1{
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 1.8em;
-}
-
-h3 {
-    font-size: 1.5em;
-}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -95,6 +85,7 @@ header {
     background: rgb(72, 69, 228);
     background: linear-gradient(135deg, rgba(72, 69, 228, 1) 33%, rgba(87, 34, 205, 1) 66%);
     color: white;
+    padding: 0 10px;
     padding-bottom: 80px;
 }
 
@@ -168,18 +159,17 @@ header {
     align-items: center;
     text-align: center;
     flex-basis: 800px;
-    padding: 60px 0;
+    padding: 60px 10px;
 }
 
 .introduction-content h2 {
     color: var(--purple-color);
-    padding: 15px;
+    padding: 15px 0;
 }
 
 .introduction-content p {
     padding-top: 60px;
     font-weight: 500;
-    font-size: 1.15em;
 }
 
 .introduction-content a {
@@ -205,7 +195,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 100px 30px;
-    max-width: 1440px;
+    max-width: 1400px;
 }
 .case-article:nth-child(even) {
     flex-direction: row-reverse;
@@ -229,7 +219,6 @@ header {
 .case-article-text p {
     padding: 40px 0;
     font-weight: 500;
-    font-size: 1.15em;
 }
 
 .case-article a {
@@ -241,19 +230,20 @@ header {
 
 .image-wrapper img {
     width: 100%;
-}
-
-.image-wrapper {
-    flex-basis: 800px;
-    flex-grow: 0;
-    flex-shrink: 1;
     border-style: none;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
 }
+
+.image-wrapper {
+    max-width: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
 /* --------------- 4.4 Services ----------------------- */
 
 #services img {
-    width: 60px;
+    width: 80px;
 }
 
 #services {
@@ -270,15 +260,15 @@ header {
     column-gap: 30px;
     row-gap: 30px;
     padding: 100px 0;
-    flex-basis: 1440px;
+    flex-basis: 1500px;
 }
 
 .service-article-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    flex-basis: 370px;
-    padding: 40px 30px;
+    flex-basis: 450px;
+    padding: 40px 40px 60px 40px;
     border-style: solid;
     border-width: 1px;
     border-color: var(--purple-color);
@@ -286,7 +276,7 @@ header {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
-.service-article-container h3 {
+.service-article-container h2 {
     padding: 5px 0 15px 0;
     color: var(--purple-color);
 }
@@ -307,7 +297,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    padding: 100px;
+    padding: 100px 30px;
     text-align: center;
     flex-basis: 1000px;
 }
@@ -318,7 +308,6 @@ header {
 
 .contact-container p {
     padding: 30px 0;
-    font-size: 1.1em;
     font-weight: 300;
 }
 
@@ -340,7 +329,7 @@ form button {
 
 #name-field {
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 20px;
     margin-bottom: 30px;
     border-radius: 5px;
     border-style: none;
@@ -348,7 +337,7 @@ form button {
 
 #email-field {
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 20px;
     margin-bottom: 30px;
     border-radius: 5px;
     border-style: none;
@@ -356,7 +345,7 @@ form button {
 
 #message-field {
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 20px;
     margin-bottom: 30px;
     border-radius: 5px;
     border-style: none;
@@ -372,3 +361,56 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 768px){
+
+
+    .nav-container {
+        justify-content: center;
+    }
+
+    .nav-container ul {
+        justify-content: space-around;
+        flex-basis: 100%;
+    }
+
+    .nav-container a {
+        font-weight: normal;
+    }
+
+    .header-content {
+        padding: 120px 0;
+    }
+
+    .introduction-content {
+        padding: 120px 10;
+    }
+
+    .introduction-content h2 {
+        font-size: 1.3em;
+    }
+
+    #case-studies {
+        padding: 100px 0 150px 0;
+    }
+
+    .case-article {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0 30px;
+    }
+
+    .case-article-text {
+        padding: 0 0 30px 0;
+        flex-basis: auto;
+    }
+
+    .case-article:nth-child(even) {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .contact-container h1 {
+        font-size: 1.8em;
+    }
+}
